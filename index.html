@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi DTY - PT. Indorama Synthetics Tbk</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans for Headings, Inter for Body -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            /* Modern Premium Color Palette */
+            --primary: #2563eb;
+            /* Vibrant Electric Blue */
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --secondary: #06b6d4;
+            /* Vivid Cyan/Teal */
+            --secondary-hover: #0891b2;
+            --dark: #0f172a;
+            /* Slate Dark */
+            --dark-navy: #0b1329;
+            /* Space Navy Dark */
+            --slate-600: #475569;
+            --slate-500: #64748b;
+            --slate-100: #f1f5f9;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+
+            /* Shadows & Border Radii */
+            --shadow-sm: 0 4px 10px rgba(15, 23, 42, 0.03);
+            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+            --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 10px 20px -8px rgba(15, 23, 42, 0.04);
+            --shadow-glow: 0 10px 30px -5px rgba(37, 99, 235, 0.25);
+
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--slate-600);
+            background-color: var(--white);
+            line-height: 1.8;
+            letter-spacing: -0.1px;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 0. Elegant Preloader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--white);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--slate-100);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+            position: relative;
+        }
+
+        .loader-spinner::after {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 4px solid transparent;
+            border-top: 4px solid var(--secondary);
+            border-radius: 50%;
+            animation: spin 0.5s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 1. Floating Glassmorphic Navbar */
+        .navbar-custom {
+            background-color: rgba(15, 23, 42, 0.8) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 20px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar-scrolled {
+            padding: 12px 0;
+            background-color: rgba(11, 19, 41, 0.92) !important;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar-custom .navbar-brand {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            color: var(--white) !important;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+        }
+
+        .navbar-custom .navbar-brand i {
+            transition: transform 0.4s ease;
+        }
+
+        .navbar-custom .navbar-brand:hover i {
+            transform: rotate(15deg) scale(1.15);
+        }
+
+        .navbar-custom .nav-link {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-size: 0.88rem;
+            position: relative;
+            padding: 8px 16px !important;
+            border-radius: 8px;
+            transition: var(--transition-fast);
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: var(--secondary) !important;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .navbar-custom .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 2px;
+            left: 16px;
+            background-color: var(--secondary);
+            transition: var(--transition-fast);
+        }
+
+        .navbar-custom .nav-link:hover::after {
+            width: calc(100% - 32px);
+        }
+
+        /* 2. Hero Carousel */
+        #heroCarousel {
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slide-item {
+            height: 70vh;
+            background-size: cover;
+            background-position: center 25%;
+            width: 100%;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.55) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-static-content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            animation: floatHero 6s ease-in-out infinite;
+        }
+
+        .hero-static-content .container {
+            pointer-events: auto;
+        }
+
+        @keyframes floatHero {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .hero-badge-white {
+            display: inline-block;
+            background-color: var(--white);
+            color: #27272a;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-badge-white .text-accent {
+            color: var(--primary);
+        }
+
+        .hero-slide-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-static-content p {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 620px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 24px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 80px;
+            opacity: 0.8;
+            z-index: 3;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        .carousel-control-prev-icon-custom,
+        .carousel-control-next-icon-custom {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            transition: var(--transition-fast);
+        }
+
+        .carousel-control-prev-icon-custom:hover,
+        .carousel-control-next-icon-custom:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            transform: scale(1.1);
+        }
+
+        .btn-modern-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white) !important;
+            border: none;
+            padding: 12px 28px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-glow);
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-modern-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-modern-outline {
+            background: transparent;
+            color: var(--white) !important;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 26px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-modern-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* 3. Section Basik Styling */
+        section {
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-title-custom {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            width: 50px;
+            margin-bottom: 16px;
+        }
+
+        .section-divider.mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 4. Tentang Perusahaan (Profil) & Statistik */
+        #profil {
+            background-color: var(--white);
+        }
+
+        .profile-content {
+            border-left: 3px solid var(--primary);
+            padding-left: 28px;
+            transition: var(--transition-smooth);
+        }
+
+        .profile-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--slate-600);
+        }
+
+        .stats-card {
+            background: var(--white);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            height: 100%;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .stats-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--slate-600);
+        }
+
+        /* 5. Karakteristik Serat */
+        #karakteristik {
+            background-color: var(--light-bg);
+            border-top: 1px solid var(--slate-100);
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .image-glow-wrapper {
+            position: relative;
+            border-radius: 16px;
+            padding: 8px;
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            transition: var(--transition-smooth);
+            overflow: hidden;
+        }
+
+        .image-glow-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: 0;
+            border-radius: 16px;
+        }
+
+        .image-glow-wrapper:hover::before {
+            opacity: 0.12;
+        }
+
+        .image-glow-wrapper img {
+            position: relative;
+            z-index: 1;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+        }
+
+        .image-glow-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .card-characteristic-info {
+            background: var(--white);
+            border-radius: 16px;
+            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+            border-top: 1px solid rgba(15, 23, 42, 0.04);
+            border-right: 1px solid rgba(15, 23, 42, 0.04);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+            transition: var(--transition-smooth);
+            padding: 24px;
+        }
+
+        .card-characteristic-info:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        /* 6. Keunggulan Section */
+        #keunggulan {
+            background-color: var(--white);
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+            transition: var(--transition-smooth);
+            height: 100%;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .benefit-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .benefit-card:hover .benefit-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+        }
+
+        /* 7. Tahapan Produksi (Mekanisme) */
+        #mekanisme {
+            background-color: var(--light-bg);
+            border-top: 1px solid var(--slate-100);
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .step-box {
+            background: var(--white);
+            border: 1px solid rgba(15, 23, 42, 0.05) !important;
+            padding: 24px 20px;
+            border-radius: 20px !important;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border-top: 4px solid var(--primary) !important;
+            z-index: 1;
+        }
+
+        .step-box::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            opacity: 0;
+            z-index: -1;
+            transition: var(--transition-smooth);
+        }
+
+        .step-box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent !important;
+        }
+
+        .step-box:hover h5,
+        .step-box:hover p,
+        .step-box:hover .step-watermark {
+            color: var(--white) !important;
+        }
+
+        .step-box:hover::after {
+            opacity: 1;
+        }
+
+        .step-box:hover .badge {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: var(--white) !important;
+        }
+
+        .step-box:hover .opacity-25 {
+            opacity: 0.85 !important;
+            color: var(--white) !important;
+        }
+
+        .step-watermark {
+            position: absolute;
+            bottom: -15px;
+            right: 15px;
+            font-size: 6rem;
+            font-weight: 800;
+            color: rgba(15, 23, 42, 0.03);
+            line-height: 1;
+            font-family: var(--font-heading);
+            user-select: none;
+            transition: var(--transition-smooth);
+            z-index: -1;
+        }
+
+        /* 8. Catalog & Gallery Cards */
+        .app-card {
+            border-radius: 20px !important;
+            overflow: hidden;
+            background: var(--white) !important;
+            border: 1px solid rgba(15, 23, 42, 0.05) !important;
+            height: 100%;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(37, 99, 235, 0.1) !important;
+        }
+
+        .app-img-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .app-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .app-card:hover .app-img {
+            transform: scale(1.06);
+        }
+
+        .app-info {
+            padding: 20px 16px;
+        }
+
+        .app-info h6 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .app-info p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--slate-500);
+        }
+
+        .icon-badge-round {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+
+        .app-card:hover .icon-badge-round {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* 9. Spesifikasi Teknis */
+        #spesifikasi {
+            background-color: var(--light-bg);
+            border-top: 1px solid var(--slate-100);
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .spec-card {
+            background: var(--white);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            transition: var(--transition-smooth);
+            height: 100%;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(37, 99, 235, 0.12);
+        }
+
+        .spec-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .spec-value {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        .spec-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .spec-desc {
+            font-size: 0.88rem;
+            color: var(--slate-500);
+            line-height: 1.65;
+            margin-bottom: 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* 10. Hubungi Kami & Peta */
+        #kontak {
+            background-color: var(--white);
+        }
+
+        .contact-card {
+            background: var(--light-bg);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            border-radius: 20px;
+            padding: 24px;
+            transition: var(--transition-smooth);
+            height: 100%;
+        }
+
+        .contact-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .map-section-wrapper {
+            background-color: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            padding: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+
+        .map-section-wrapper:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .map-section-wrapper iframe {
+            border-radius: 18px;
+            display: block;
+        }
+
+        /* Modern Form Inputs */
+        .form-group-modern {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .form-control-modern {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            background-color: var(--white);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: var(--dark);
+            font-family: var(--font-body);
+            transition: var(--transition-smooth);
+        }
+
+        .form-control-modern:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: var(--white);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-label-modern {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--slate-600);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Success Toast Notification */
+        .toast-custom {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--white);
+            color: var(--dark);
+            border-left: 4px solid #10b981;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            transform: translateX(-120%);
+            transition: var(--transition-smooth);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .toast-custom.show {
+            transform: translateX(0);
+        }
+
+        /* 11. Footer */
+        footer {
+            background-color: var(--dark-navy) !important;
+            color: rgba(255, 255, 255, 0.65);
+            padding: 40px 0;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        footer p {
+            letter-spacing: 0.5px;
+        }
+
+        /* 12. Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: var(--shadow-glow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Scroll Animation Observer */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform, opacity;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* 13. Responsive Media Queries */
+        @media (max-width: 991.98px) {
+            .navbar-custom {
+                padding: 12px 0;
+            }
+
+            #heroCarousel {
+                height: 60vh;
+            }
+
+            .hero-slide-item {
+                height: 60vh;
+            }
+
+            .hero-slide-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-static-content p {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            section {
+                padding: 30px 0;
+            }
+
+            .section-title-custom {
+                font-size: 1.8rem;
+            }
+
+            #heroCarousel {
+                height: 50vh;
+            }
+
+            .hero-slide-item {
+                height: 50vh;
+            }
+
+            .hero-slide-title {
+                font-size: 2rem;
+            }
+
+            .hero-static-content p {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+
+            .btn-modern-primary,
+            .btn-modern-outline {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .stats-number {
+                font-size: 2rem;
+            }
+
+            .stats-label {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 0. PRELOADER -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-industry text-info me-2"></i>INDORAMA SYNTHETICS
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#profil">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#keunggulan">Keunggulan DTY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#karakteristik">Karakteristik</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mekanisme">Tahapan Produksi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#spesifikasi">Spesifikasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pemanfaatan">Pemanfaatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Hubungi Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO CAROUSEL -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
+        <!-- Background Images Slider -->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide-item" style="background-image: url('foto_dty.jpeg');"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="hero-slide-item" style="background-image: url('1.jpeg');"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="hero-slide-item" style="background-image: url('3.jpeg');"></div>
+            </div>
+        </div>
+
+        <!-- Dark Transparent Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Static Content Overlay -->
+        <div class="hero-static-content">
+            <div class="container text-start">
+                <div style="max-width: 680px;">
+                    <div class="hero-badge-white mb-3">
+                        PT. <span class="text-accent">Indorama Synthetics Tbk</span>
+                    </div>
+                    <h1 class="hero-slide-title mb-4">
+                        Divisi Draw<br>Textured Yarn <span class="text-info">(DTY)</span>
+                    </h1>
+                    <p>
+                        Edukasi operasional manufaktur, istilah teknis, dan pemanfaatan serat tekstil poliester di
+                        lingkungan industri modern PT. Indorama Synthetics Tbk.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#karakteristik" class="btn-modern-primary">
+                            Pelajari Karakteristik <i class="fas fa-arrow-right ms-1" style="font-size: 0.8rem;"></i>
+                        </a>
+                        <a href="#mekanisme" class="btn-modern-outline">
+                            Lihat Alur Produksi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon-custom" aria-hidden="true">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon-custom" aria-hidden="true">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- 3. TENTANG PERUSAHAAN & STATISTIK -->
+    <section id="profil" class="fade-up">
+        <div class="container">
+            <div class="row g-3 align-items-start mb-3">
+                <!-- Kolom Kiri: Judul Section & Ornamen Garis -->
+                <div class="col-md-4 text-start">
+                    <div style="position: sticky; top: 110px;">
+                        <span class="section-subtitle">Identitas</span>
+                        <h2 class="section-title-custom">Tentang<br>Perusahaan</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Teks Sejarah dengan Spasi Paragraf -->
+                <div class="col-md-8 text-start">
+                    <div class="profile-content">
+                        <p class="mb-4 text-secondary text-justify">
+                            <strong>PT. Indorama Synthetics Tbk</strong> pertama kali didirikan pada tahun 1975 di
+                            Purwakarta dan awalnya bergerak di bidang pemintalan benang biasa. Seiring berjalannya waktu
+                            dan perkembangan teknologi, perusahaan ini melakukan perluasan bisnis yang besar ke
+                            ekosistem pembuatan poliester secara terintegrasi.
+                        </p>
+                        <p class="m-0 text-muted text-justify">
+                            Saat ini, fasilitas pabrik utamanya berada di Purwakarta dan Bandung, serta produk tekstil
+                            berkualitas tinggi yang dihasilkan sudah dikirim ke pelanggan setia di lebih dari 70 negara
+                            di seluruh dunia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row Statistik Industri -->
+            <div class="row g-3 mt-3">
+                <div class="col-6 col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">1975</div>
+                        <div class="stats-label">Tahun Berdiri</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">70+</div>
+                        <div class="stats-label">Negara Tujuan Ekspor</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">2</div>
+                        <div class="stats-label">Lokasi Pabrik Utama</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">100%</div>
+                        <div class="stats-label">Poliester Berkualitas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. KEUNGGULAN DTY INDORAMA -->
+    <section id="keunggulan" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Nilai Tambah</span>
+                <h2 class="section-title-custom">Keunggulan DTY Indorama</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted mt-3 mb-0 mx-auto" style="max-width: 750px; font-size: 1rem;">Mengapa benang Draw
+                    Textured Yarn (DTY) dari PT. Indorama Synthetics Tbk menjadi pilihan utama di pasar tekstil
+                    internasional.</p>
+            </div>
+
+            <div class="row g-3">
+                <!-- Keunggulan 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.15rem;">Lentur & Empuk</h5>
+                        <p class="small text-muted mb-0 text-justify">Memiliki struktur serat bergelombang yang merata,
+                            sehingga benang terasa sangat lembut, mengembang (empuk), dan adem saat dijadikan bahan
+                            pakaian.</p>
+                    </div>
+                </div>
+                <!-- Keunggulan 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.15rem;">Warna Awet & Tidak Luntur</h5>
+                        <p class="small text-muted mb-0 text-justify">Pewarnaan dilakukan langsung saat bahan mentah
+                            dicairkan sebelum menjadi benang, menghasilkan warna yang menyatu kuat, merata, dan tidak
+                            mudah pudar.</p>
+                    </div>
+                </div>
+                <!-- Keunggulan 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.15rem;">Bahan Ramah Lingkungan</h5>
+                        <p class="small text-muted mb-0 text-justify">Mendukung pilihan pembuatan benang dari bahan daur
+                            ulang botol plastik bekas yang telah bersertifikat standar kelestarian lingkungan
+                            internasional.</p>
+                    </div>
+                </div>
+                <!-- Keunggulan 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.15rem;">Kuat & Tidak Mudah Putus</h5>
+                        <p class="small text-muted mb-0 text-justify">Benang memiliki kekuatan tarik yang sangat kokoh
+                            dan stabil, sehingga proses merajut di mesin otomatis pabrik berjalan sangat lancar tanpa
+                            kendala.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. KARAKTERISTIK SERAT DTY -->
+    <section id="karakteristik" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Analisis Material</span>
+                <h2 class="section-title-custom">Karakteristik Serat DTY</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="row justify-content-center align-items-center g-3 mt-2">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="image-glow-wrapper">
+                        <img src="4.jpeg" alt="Untaian Benang DTY">
+                    </div>
+                </div>
+                <div class="col-md-6 text-start d-flex align-items-center">
+                    <div class="ps-md-4">
+                        <p class="mb-4 text-secondary text-justify" style="font-size: 1.05rem;">
+                            <strong>Draw Textured Yarn (DTY)</strong> adalah jenis benang poliester yang dibuat melalui
+                            proses peregangan dan pemintalan tekstur secara bersamaan. Proses ini mengubah sifat benang
+                            yang awalnya kaku, lurus, dan licin menjadi bergelombang, elastis, dan terasa lebih empuk
+                            saat dipegang.
+                        </p>
+                        <div class="card-characteristic-info">
+                            <p class="mb-0 text-dark small text-justify" style="line-height: 1.8; font-weight: 500;">
+                                <span class="text-primary fw-bold d-block mb-2" style="font-size: 0.98rem;">
+                                    <i class="fas fa-lightbulb me-2 text-warning"></i>Kelebihan Utama Serat:
+                                </span>
+                                Perubahan fisik ini membuat benang DTY memiliki daya serap udara yang jauh lebih baik
+                                dan terasa nyaman saat digunakan, sangat mirip dengan sifat kain dari serat alami kapas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TAHAPAN PRODUKSI -->
+    <section id="mekanisme" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Alur Kerja Teknis</span>
+                <h2 class="section-title-custom">Mekanisme Produksi</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted mt-3 mb-0 mx-auto" style="max-width: 650px; font-size: 1rem;">Tahapan pembuatan
+                    benang dari bahan baku biji plastik hingga menjadi produk jadi yang siap digunakan.</p>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <!-- Fase 01 -->
+                <div class="col-md-4">
+                    <div class="step-box shadow-sm p-4 rounded-3">
+                        <div class="step-watermark">01</div>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="badge bg-primary px-3 py-2 text-uppercase"
+                                style="font-size: 0.75rem; letter-spacing: 0.5px; font-weight: 600;">Fase 01</span>
+                            <div class="text-primary opacity-25" style="font-size: 1.6rem;"><i
+                                    class="fas fa-fire-alt"></i></div>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-3" style="font-size: 1.15rem;">Pelelehan Polimer</h5>
+                        <p class="small text-muted mb-0 text-justify">Bahan baku berupa biji plastik poliester dicairkan
+                            di dalam mesin, lalu dialirkan melewati piringan cetakan logam berlubang kecil untuk
+                            membentuk helaian serat panjang berkelanjutan.</p>
+                    </div>
+                </div>
+                <!-- Fase 02 -->
+                <div class="col-md-4">
+                    <div class="step-box shadow-sm p-4 rounded-3">
+                        <div class="step-watermark">02</div>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="badge bg-primary px-3 py-2 text-uppercase"
+                                style="font-size: 0.75rem; letter-spacing: 0.5px; font-weight: 600;">Fase 02</span>
+                            <div class="text-success opacity-25" style="font-size: 1.6rem;"><i class="fas fa-wind"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-3" style="font-size: 1.15rem;">Solidifikasi POY</h5>
+                        <p class="small text-muted mb-0 text-justify">Cairan serat tersebut kemudian didinginkan dengan
+                            hembusan angin hingga membeku, lalu disatukan dan digulung menjadi gulungan benang mentah
+                            yang disebut POY.</p>
+                    </div>
+                </div>
+                <!-- Fase 03 -->
+                <div class="col-md-4">
+                    <div class="step-box shadow-sm p-4 rounded-3">
+                        <div class="step-watermark">03</div>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="badge bg-primary px-3 py-2 text-uppercase"
+                                style="font-size: 0.75rem; letter-spacing: 0.5px; font-weight: 600;">Fase 03</span>
+                            <div class="text-warning opacity-25" style="font-size: 1.6rem;"><i
+                                    class="fas fa-sync-alt"></i></div>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-3" style="font-size: 1.15rem;">Peneksturan Mekanis</h5>
+                        <p class="small text-muted mb-0 text-justify">Gulungan benang POY dimasukkan ke mesin DTY untuk
+                            ditarik secara mekanis, dipanaskan, dan dipilin menggunakan gesekan cakram agar menghasilkan
+                            tekstur mengembang yang elastis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SPESIFIKASI TEKNIS DTY -->
+    <section id="spesifikasi" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Detail Produk</span>
+                <h2 class="section-title-custom">Spesifikasi Teknis DTY</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted mt-3 mb-0 mx-auto" style="max-width: 750px; font-size: 1rem;">Rentang kustomisasi
+                    parameter teknis serat DTY yang diproduksi di lini hanggar PT. Indorama Synthetics Tbk.</p>
+            </div>
+
+            <div class="row g-3">
+                <!-- Spec 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="spec-card">
+                        <div class="spec-value">75D - 600D</div>
+                        <h5 class="spec-title">Ketebalan Benang (Denier)</h5>
+                        <p class="spec-desc">Ukuran ketebalan diameter benang poliester. Mulai dari yang paling tipis
+                            (75D) untuk pakaian olahraga ringan, hingga yang paling tebal (600D) untuk kain dekorasi
+                            padat.</p>
+                    </div>
+                </div>
+                <!-- Spec 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="spec-card">
+                        <div class="spec-value">Redup ke Berkilau</div>
+                        <h5 class="spec-title">Tingkat Kilap (Luster)</h5>
+                        <p class="spec-desc">Pilihan tampilan kilau benang, mulai dari yang redup (Semi-Dull) untuk
+                            bahan kaos harian, sangat mengkilap (Bright) untuk kain mewah, hingga benang yang langsung
+                            berwarna sejak pembuatan.</p>
+                    </div>
+                </div>
+                <!-- Spec 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="spec-card">
+                        <div class="spec-value">Renggang ke Rapat</div>
+                        <h5 class="spec-title">Ikatan Serat (Intermingle)</h5>
+                        <p class="spec-desc">Tingkat kerapatan jalinan titik pilin serat benang menggunakan embusan
+                            udara khusus. Berguna mencegah benang kusut atau terurai saat dirajut dengan mesin otomatis.
+                        </p>
+                    </div>
+                </div>
+                <!-- Spec 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="spec-card">
+                        <div class="spec-value">36 - 288 Helai</div>
+                        <h5 class="spec-title">Jumlah Serat (Filament)</h5>
+                        <p class="spec-desc">Banyaknya helai serat sangat tipis yang digabungkan membentuk satu benang
+                            utuh. Semakin banyak jumlah helai seratnya, kain rajutan akan terasa semakin halus di kulit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PEMANFAATAN PRODUK -->
+    <section id="pemanfaatan" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Aplikasi Serat</span>
+                <h2 class="section-title-custom">Pemanfaatan Produk</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted mt-3 mb-0 mx-auto" style="max-width: 750px; font-size: 1rem;">Benang DTY Indorama
+                    digunakan secara luas untuk memproduksi bahan tekstil berkualitas tinggi di berbagai sektor industri
+                    global.</p>
+            </div>
+
+            <div class="row g-3">
+                <!-- Kartu 1: Kain Pakaian -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&q=80&w=400"
+                                class="app-img" alt="Kain Pakaian">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-tshirt"></i></span>Kain Pakaian</h6>
+                            <p class="mb-0 text-justify">Diproduksi menjadi baju, celana, jilbab, hingga kaos olahraga
+                                yang lentur dan adem.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu 2: Tekstil Rumah Tangga -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=400"
+                                class="app-img" alt="Tekstil Rumah Tangga">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-bed"></i></span>Tekstil Rumah</h6>
+                            <p class="mb-0 text-justify">Digunakan untuk pembuatan sprei kasur lembut dan kain gorden
+                                rumah tangga.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu 3: Kain Furnitur -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400"
+                                class="app-img" alt="Kain Furnitur">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-couch"></i></span>Kain Furnitur</h6>
+                            <p class="mb-0 text-justify">Dimanfaatkan sebagai bahan upholstery pelapis sofa dan dekorasi
+                                interior sejenis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu 4: Tekstil Khusus -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="karpet.jpeg" class="app-img" alt="Tekstil Khusus">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-scroll"></i></span>Tekstil Khusus</h6>
+                            <p class="mb-0 text-justify">Diolah lebih lanjut menjadi karpet ruangan tebal serta rajutan
+                                kain elastis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DOKUMENTASI LAPANGAN -->
+    <section id="dokumentasi" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Dokumentasi Lapangan</span>
+                <h2 class="section-title-custom">Galeri Observasi Industri</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted mt-3 mb-0 mx-auto" style="max-width: 750px; font-size: 1rem;">Dokumentasi
+                    peninjauan langsung alur infrastruktur manufaktur di dalam area hangar workshop DTY.</p>
+            </div>
+
+            <div class="row g-3">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="1.jpeg" class="app-img" alt="Rak Creel">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-th"></i></span>Tempat Rak Creel</h6>
+                            <p class="mb-0 text-justify">Melihat penataan tempat paket gulungan material benang mentah
+                                POY di area kerja hanggar pabrik.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="2.jpeg" class="app-img" alt="Jalur Mesin">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-cogs"></i></span>Jalur Operasional Mesin</h6>
+                            <p class="mb-0 text-justify">Melihat langsung bagaimana mekanisme penarikan mekanis,
+                                pemanasan, dan pemintalan serat benang berjalan otomatis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="app-card shadow-sm border border-1 h-100">
+                        <div class="app-img-wrapper">
+                            <img src="3.jpeg" class="app-img" alt="Hasil Gulungan">
+                        </div>
+                        <div class="app-info text-start">
+                            <h6 class="fw-bold text-dark"><span class="icon-badge-round"><i
+                                        class="fas fa-box"></i></span>Hasil Akhir Paket Bobbin</h6>
+                            <p class="mb-0 text-justify">Melihat hasil akhir benang DTY putih berkualitas tinggi yang
+                                sudah tergulung presisi pada silinder tabung bobbin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. HUBUNGI KAMI & LOKASI -->
+    <section id="kontak" class="fade-up">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-subtitle">Hubungi Kami</span>
+                <h2 class="section-title-custom">Kontak & Lokasi</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted mt-3 mb-0 mx-auto" style="max-width: 750px; font-size: 1rem;">Punya pertanyaan
+                    mengenai produk DTY, kunjungan industri, atau kemitraan? Silakan hubungi kami atau temukan lokasi
+                    kampus kami di bawah ini.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Kolom Kiri: Formulir Kontak -->
+                <div class="col-lg-6 text-start">
+                    <div class="contact-card d-flex flex-column h-100 justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-3" style="font-size: 1.25rem;">
+                                <i class="fas fa-envelope text-primary me-2"></i>Kirim Pesan
+                            </h4>
+                            <p class="text-muted mb-4 small">
+                                Silakan isi formulir di bawah ini untuk mengirimkan pesan langsung ke tim administrasi
+                                kami.
+                            </p>
+                            <form id="contactForm">
+                                <div class="form-group-modern">
+                                    <label class="form-label-modern" for="inputName">Nama Lengkap</label>
+                                    <input type="text" id="inputName" class="form-control-modern"
+                                        placeholder="Masukkan nama lengkap Anda" required>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label-modern" for="inputEmail">Alamat Email</label>
+                                    <input type="email" id="inputEmail" class="form-control-modern"
+                                        placeholder="nama@email.com" required>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label-modern" for="inputSubject">Subjek Pesan</label>
+                                    <input type="text" id="inputSubject" class="form-control-modern"
+                                        placeholder="Topik atau subjek pesan" required>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label-modern" for="inputMessage">Pesan Anda</label>
+                                    <textarea id="inputMessage" class="form-control-modern" rows="4"
+                                        placeholder="Tuliskan pesan Anda secara detail..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-modern-primary w-100 justify-content-center">
+                                    Kirim Pesan <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Peta Lokasi & Info Kontak -->
+                <div class="col-lg-6 text-start">
+                    <div class="contact-card d-flex flex-column h-100 justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-3" style="font-size: 1.25rem;">
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i>Kampus Utama
+                            </h4>
+                            <p class="text-secondary mb-2 fw-semibold"
+                                style="font-size: 1.1rem; color: var(--dark) !important;">
+                                Politeknik Enjinering Indorama
+                            </p>
+                            <p class="text-muted mb-4 small" style="line-height: 1.7;">
+                                Kawasan Industri Indorama, Kembang kuning, Kecamatan Jatiluhur, Kabupaten Purwakarta,
+                                Jawa Barat 41101.
+                            </p>
+
+                            <!-- Tombol Navigasi Premium -->
+                            <a class="btn-modern-primary d-inline-flex mb-4"
+                                href="https://maps.google.com/?q=Politeknik+Enjinering+Indorama" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> Petunjuk Arah Google Maps
+                            </a>
+                        </div>
+
+                        <div class="map-section-wrapper mt-auto">
+                            <!-- Menggunakan Google Maps Embed API Resmi untuk menyembunyikan parameter gangguan luar -->
+                            <iframe width="100%" height="290" style="border:0; display: block;"
+                                src="https://maps.google.com/maps?q=Politeknik%20Enjinering%20Indorama,%20Purwakarta&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="text-center text-white">
+        <div class="container">
+            <p class="mb-0 fw-semibold text-white-50">Dyan Putri Agustin</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Success Toast Notification -->
+    <div id="contact-toast" class="toast-custom">
+        <i class="fas fa-check-circle text-success me-2" style="font-size: 1.25rem;"></i>
+        <span>Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.</span>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle dengan Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Preloader Fade Out
+        const fadeOutLoader = () => {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                setTimeout(() => loader.remove(), 500);
+            }
+        };
+        window.addEventListener('load', fadeOutLoader);
+        // Fail-safe preloader fade out after 2 seconds to prevent blocking users on slow network resources (like maps)
+        setTimeout(fadeOutLoader, 2000);
+
+        // Navbar Scroll & Back-to-Top Behavior
+        const navbar = document.querySelector('.navbar-custom');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (navbar) {
+                if (window.scrollY > 80) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            }
+
+            if (backToTopBtn) {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            }
+        });
+
+        // Back-to-Top click handler
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Contact Form Submission Handler
+        const contactForm = document.getElementById('contactForm');
+        const contactToast = document.getElementById('contact-toast');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+
+                // Change button state to loading
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Mengirim...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    // Show custom success toast
+                    if (contactToast) {
+                        contactToast.classList.add('show');
+                        setTimeout(() => {
+                            contactToast.classList.remove('show');
+                        }, 4000);
+                    }
+
+                    // Reset form and restore button state
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+        }
+
+        // Intersection Observer for Smooth Fade-Up Transitions
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    // Stop observing once it's shown to keep layout stable
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
